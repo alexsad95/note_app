@@ -15,10 +15,10 @@ export const FirebaseState = ({children}) => {
 
   const showLoader = () => dispatch({type: SHOW_LOADER});
 
-  const fetchNotes = () => {
+  const fetchNotes = async () => {
     try {
       showLoader();
-      const res = axios.get(`${url}/notes.json`);
+      const res = await axios.get(`${url}/notes.json`);
 
       const payload = Object.keys(res.data).map(key => {
         return {
@@ -28,10 +28,8 @@ export const FirebaseState = ({children}) => {
       });
 
       dispatch({ type: FETCH_NOTES, payload });
-    } 
-    finally {
-      // throw error;
-      console.log('finally')
+    } catch(e) {
+      throw new Error(e);
     }
   };
 

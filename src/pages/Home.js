@@ -8,12 +8,7 @@ export const Home = () => {
   const {loading, notes, fetchNotes, removeNote } = useContext(FirebaseContext);
 
   useEffect(() => {
-    try {
-      fetchNotes();
-    } 
-    catch(e) {
-      console.log('error: ', e)
-    }
+    fetchNotes();
     // eslint-disable-next-line
   }, []);
   return (
