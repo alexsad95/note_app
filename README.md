@@ -5,9 +5,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Before starting the application, you must install all dependencies:
 
-### `yarn install`
+`yarn install`
 
 Also you need to change `REACT_APP_DB_URL` parameter in `.env.local` file to link from your Firebase DB. 
 After that in the project directory, you can run:
 
-### `yarn start`
+`yarn start`
+
+How works this app:
+
+![note_app_works](https://github.com/alexsad95/note_app/blob/main/public/working_app.gif)
